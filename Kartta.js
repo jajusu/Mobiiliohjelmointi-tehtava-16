@@ -17,7 +17,7 @@ export default function App({route,navigation}) {
 }, [])
 
   const haeOsoite = () => {
-    fetch(`http://www.mapquestapi.com/geocoding/v1/address?key=2msKtjqAZ1D4pFv2irBeSRD605ROwdHA&location=${osoite}`)
+    fetch(`location=${osoite}`) //tähän api-koodi mapquestapista
     .then(response => response.json())
     .then(responseJson  =>  setKoordinaatit({
       latitude: responseJson.results[0].locations[0].latLng.lat,
